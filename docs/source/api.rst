@@ -52,8 +52,10 @@ Deleting a chain
 
     Go23WalletChainManage.getInstance().deleteChain(String link,String id,callback CallBack);
 
-Switching to a different chain
+Switching the active chain
 ```````````````````````````````
+
+Switch a wallet's currently active chain.
 
 .. code-block:: console
 
