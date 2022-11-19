@@ -1,12 +1,10 @@
-Usage
-=====
-
-.. _installation:
-
 Installation
-------------
+============
 
-To use Lumache, first install it using pip:
+To install CoinsGO23 Wallet complete the following steps:
+
+1. Download ``coins.center.aar`` and add it to ``libs``.
+2. 
 
 .. code-block:: console
 
