@@ -113,20 +113,86 @@ To install CoinsGO23 Wallet complete the following steps:
 
  }
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+4. Add the following code to proguard.rules.pro
 
-.. autofunction:: lumache.get_random_ingredients
+.. code-block:: console
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+  -keep class wallet.core {*;}
+  -keep class com.coins.app.** { *; }
 
-.. autoexception:: lumache.InvalidKindError
+ # For native methods, see http://proguard.sourceforge.net/manual/examples.html#native
+ -keepclasseswithmembernames class * {
+    native <methods>;
+ }
 
-For example:
+  Keep setters in Views so that animations can still work.
+ -keepclassmembers public class * extends android.view.View {
+    void set*(***);
+    *** get*();
+ }
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+ # We want to keep methods in Activity that could be used in the XML attribute onClick.
+ -keepclassmembers class * extends android.app.Activity {
+    public void *(android.view.View);
+ }
 
+ # For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
+ -keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+ }
+
+ -keepclassmembers class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+ }
+
+ -keepclassmembers class **.R$* {
+    public static <fields>;
+ }
+
+ # Preserve annotated Javascript interface methods.
+ -keepclassmembers class * {
+    @android.webkit.JavascriptInterface <methods>;
+ }
+
+ # Understand the @Keep support annotation.
+ -keep class androidx.annotation.Keep
+
+ -keep class wallet.** {*;}
+
+ -keep @androidx.annotation.Keep class * {*;}
+
+ -keepclasseswithmembers class * {
+    @androidx.annotation.Keep <methods>;
+ }
+
+ -keepclasseswithmembers class * {
+    @androidx.annotation.Keep <fields>;
+ }
+
+ -keepclasseswithmembers class * {
+    @androidx.annotation.Keep <init>(...);
+ }
+
+ -keep public class * extends android.app.Activity
+ -keep public class * extends android.app.Application
+ -keep public class * extends android.app.Service
+ -keep public class * extends android.content.BroadcastReceiver
+ -keep public class * extends android.content.ContentProvider
+ -keep public class * extends android.app.backup.BackupAgentHelper
+ -keep public class * extends android.preference.Preference
+ -keep public class com.android.vending.licensing.ILicensingService
+ -keep class javax.** { *; }
+ -keep class org.web3j.** { *; }
+
+5. Add the following code to the application
+
+.. code-block:: console
+
+     CoinsWeb3Manager.getInstance().build(getApplicationContext(), "clientId", "clientSecret");
+
+6. Finally, add the following code to the location where theuser is redirected to the GameCenter:
+
+.. code-block:: console
+
+      CoinsWeb3Manager.getInstance().setUniqueId("uniqueId").setEmail("email").setPhone("phone").start();
