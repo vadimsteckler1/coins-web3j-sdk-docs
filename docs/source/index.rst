@@ -1,10 +1,9 @@
-Welcome to Lumache's documentation!
-===================================
+Welcome to Coins GO23 Wallet documentation!
+===========================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**Coins GO23 Wallet SDK** is a *lightweight* and *intuitive* yet *powerful* open-source SDK 
+that seamlessly integrates Coins Wallet Web 3.0 features into hundreds of dApps. 
+It allows your users to store various tokens and spend them on games, stake them on DeFi apps, and trade them on exchanges.
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
