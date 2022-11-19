@@ -5,8 +5,8 @@ Welcome to Coins GO23 Wallet documentation!
 that seamlessly integrates Coins Wallet Web 3.0 features into hundreds of dApps. 
 It allows your users to store various tokens and spend them on games, stake them on DeFi apps, and trade them on exchanges.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+For information on how to install the project, check out the :doc:`installation`.
+For the details on the available API methods, refer to :doc:`api`.
 
 .. note::
 
@@ -17,5 +17,5 @@ Contents
 
 .. toctree::
 
-   usage
+   installation
    api
