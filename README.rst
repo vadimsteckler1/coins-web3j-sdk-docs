@@ -1,17 +1,14 @@
-Overview
-=======================================
+# Overview
 
-Coins GO23 Wallet SDK is a lightweight yet powerful open-source SDK that seamlessly integrates Coins Wallet Web 3.0 features into hundreds of dApps.
+Coins GO23 Wallet SDK is a lightweight yet powerful open-source SDK that seamlessly integrates Coins Wallet Web 3.0 features into hundreds of dApps. It allows your users to store various tokens and spend them on games, stake them on DeFi apps, and trade them on exchanges.
 
-It allows your users to store Ether and other ERC-20 tokens. Users can then spend these tokens on games, stake them on DeFi apps, and trade them on exchanges. MetaMask does not store only ERC-20 tokens but can also store ERC-721 tokens.
+## Features
 
-Features
-=======================================
-Easy: Simplified and improved wallet integration for native mobile applications via deep-linking, without requiring a web application.
-Decentralized and reliable: Doesn't depend on external services and relay servers for delivering messages and app-to-wallet communication.
-Secure: Utilizes end-to-end encryption with secure key exchange and decentralized identity verification using the well-known URI standard for universal links.
-Efficient: Reduces the number of hops between client applications and wallet via support for batch requests.
-Open-source: All of the code for Coinbase Wallet Mobile SDK is open source and available on GitHub.
+- [x] **Simple**: Straightforward wallet integration for native mobile applications via deep-linking, without requiring a web application.
+- [x] **Secure**: Private keys never leave your non-custodial wallet, so no external or relay service, including Coins, has access to them.
+- [x] **Swift**: No seed phrases are generated or required during the setup
+- [x] **Efficient**: Supports cross-chain transfers with the customizable minimum amount and ultra-low handling fees 
+- [x] **Open-source**: All of the code for Coins GO23 Wallet SDK is open-source and available on GitHub.
 
 Read the tutorial here:
 
