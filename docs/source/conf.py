@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'GO23 Wallet'
+copyright = '2022, Coins.ph'
+author = 'Product Group'
 
 release = '0.1'
 version = '0.1.0'
