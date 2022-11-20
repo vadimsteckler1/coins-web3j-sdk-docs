@@ -37,6 +37,8 @@ This method deletes an existing crypto token.
 Finding a token in the chain
 `````````````
 
+This method finds an existing token in a wallet's chain.
+
 .. code-block:: console
 
     Go23WalletTokensManage.getInstance().findTokensFromChain(String link,String id,callback CallBack);  
