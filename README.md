@@ -12,4 +12,4 @@ Coins GO23 Wallet SDK is a lightweight yet powerful open-source SDK that seamles
 
 Read the tutorial here:
 
-https://docs.readthedocs.io/en/stable/tutorial/
+https://coins-web3j-sdk-docs.readthedocs.io/en/latest/index.html
